@@ -3,14 +3,14 @@
 // import MovieCast from "./components/NestedRoutes/MovieCast";
 // import MovieReviews from "./components/NestedRoutes/MovieReviews";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./views/HomePage/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import Navigation from "./components/Navigation/Navigation";
-import NotFoundPage from "./views/NotFoundPages/NotFoundPage";
+import NotFoundPage from "./pages/NotFoundPages/NotFoundPage";
 import { lazy, Suspense } from "react";
 
-const MoviesPage = lazy(() => import("./views/MoviesPage/MoviesPage"));
+const MoviesPage = lazy(() => import("./pages/MoviesPage/MoviesPage"));
 const MovieDetailsPage = lazy(() =>
-  import("./views/MovieDetailsPage/MovieDetailsPage")
+  import("./pages/MovieDetailsPage/MovieDetailsPage")
 );
 const MovieCast = lazy(() => import("./components/NestedRoutes/MovieCast"));
 const MovieReviews = lazy(() =>
