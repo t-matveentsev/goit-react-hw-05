@@ -1,0 +1,25 @@
+.title {
+  margin: 20px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.listItem {
+  border: solid 1px black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black;
+}
+
+.listImg {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  padding-bottom: 10px;
+}

@@ -1,7 +1,3 @@
-// import MoviesPage from "./Pages/MoviesPage";
-// import MovieDetailsPage from "./Pages/MovieDetailsPage";
-// import MovieCast from "./components/NestedRoutes/MovieCast";
-// import MovieReviews from "./components/NestedRoutes/MovieReviews";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import Navigation from "./components/Navigation/Navigation";

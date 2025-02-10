@@ -1,33 +1,36 @@
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import MovieList from "../../components/MovieList/MovieList";
 import { fetchSearchMovies } from "../../services/api";
 
 const MoviesPage = () => {
-  const [query, setQuery] = useState("");
   const [searchMovies, setSearchMovies] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get("query") ?? "";
 
   useEffect(() => {
     if (!query) return;
-    async function fetchArticles() {
+    async function fetchMovies() {
       try {
         const movies = await fetchSearchMovies(query);
-        setSearchMovies((prev) => [...prev, ...movies]);
+        setSearchMovies(movies);
       } catch (error) {
         console.log(error);
       }
     }
-    fetchArticles();
+    fetchMovies();
   }, [query]);
 
   const handleSetQuery = (newQuery) => {
-    setQuery(newQuery);
+    if (newQuery === query) return;
     setSearchMovies([]);
+    setSearchParams({ query: newQuery });
   };
 
   return (
     <div>
-      <SearchBar handleSearch={handleSetQuery} />
+      <SearchBar handleSearch={handleSetQuery} initialQuery={query} />
       <MovieList movies={searchMovies} />
     </div>
   );

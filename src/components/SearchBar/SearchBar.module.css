@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  background-color: inherit;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  height: 35px;
+  width: 350px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 18px;
+  font-family: inherit;
+  padding-left: 15px;
+}
+
+input::placeholder {
+  opacity: 0.7;
+}

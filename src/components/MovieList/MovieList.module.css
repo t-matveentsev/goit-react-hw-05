@@ -1,0 +1,46 @@
+.wrapper {
+  max-width: 375px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .wrapper {
+    max-width: 1780px;
+    padding: 0 100px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.listItem {
+  border: solid 1px black;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: black;
+}
+
+.listLink {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.listImg {
+  width: 400px;
+  height: 550px;
+  object-fit: cover;
+  padding-bottom: 10px;
+}

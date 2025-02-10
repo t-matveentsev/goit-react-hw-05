@@ -1,15 +1,15 @@
 import { useState } from "react";
+import s from "./SearchBar.module.css";
 
-const SearchBar = ({ handleSearch }) => {
-  const [value, setValue] = useState("");
-
+const SearchBar = ({ handleSearch, initialQuery }) => {
+  const [value, setValue] = useState(initialQuery);
   const handleSubmit = (e) => {
     e.preventDefault();
     handleSearch(value);
   };
 
   return (
-    <div>
+    <div className={s.wrapper}>
       <form onSubmit={handleSubmit}>
         <input
           onChange={(e) => setValue(e.target.value)}
@@ -19,7 +19,7 @@ const SearchBar = ({ handleSearch }) => {
           autoComplete="off"
           placeholder="Search movies"
         />
-        <button>Search</button>
+        {/* <button className={s.formBtn}>Search</button> */}
       </form>
     </div>
   );
