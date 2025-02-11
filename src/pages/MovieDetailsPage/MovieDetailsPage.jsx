@@ -30,7 +30,7 @@ const MovieDetailsPage = () => {
   return (
     <div className={s.wrapper}>
       <Link className={s.backBtn} to={goBackUrl.current}>
-        Go back to search
+        Go back
       </Link>
       <div className={s.cardInfo}>
         <img
@@ -47,8 +47,8 @@ const MovieDetailsPage = () => {
       </div>
 
       <div className={s.navInfo}>
-        <NavLink to={`cast`}>Check actors</NavLink>
-        <NavLink to={`reviews`}>Check reviews</NavLink>
+        <NavLink to={`cast`}>Actors</NavLink>
+        <NavLink to={`reviews`}>Reviews</NavLink>
       </div>
       <Outlet />
     </div>

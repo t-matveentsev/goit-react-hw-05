@@ -10,6 +10,8 @@
 .backBtn {
   margin-right: auto;
   padding: 30px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .cardInfo {
@@ -20,6 +22,7 @@
 
 .cardImg {
   margin: auto;
+  width: 400px;
 }
 
 .infoWrapper {

@@ -9,15 +9,15 @@ const MovieList = ({ movies }) => {
       <ul className={s.list}>
         {movies.map((item) => (
           <li key={item.id} className={s.listItem}>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
-              className={s.listImg}
-            />
             <NavLink
               state={location}
               to={`/movies/${item.id}`}
               className={s.listLink}
             >
+              <img
+                src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
+                className={s.listImg}
+              />
               {item.title}
             </NavLink>
           </li>
